@@ -27,11 +27,11 @@ export default {
     },
     value: String
   },
-  setup (props, ctx) {
+  setup (props, proxy) {
     const instance = getCurrentInstance();
 
     const searchOptions = (e) => {
-      ctx.emit('searchOptions', e.target.value);
+      proxy.emit('searchOptions', e.target.value);
     }
 
     const setValue = (value) => {

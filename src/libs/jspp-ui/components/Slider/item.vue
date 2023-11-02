@@ -23,11 +23,11 @@ export default {
 
         const state = reactive({
             selfIndex: instance.vnode.key,
-            curentIndex: instance.parent.ctx.currentIndex
+            curentIndex: instance.parent.proxy.currentIndex
         });
 
         watch(() => {
-            return instance.parent.ctx.currentIndex;
+            return instance.parent.proxy.currentIndex;
         }, (value) => {
             state.curentIndex = value;
         })

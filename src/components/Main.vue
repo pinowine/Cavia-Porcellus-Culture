@@ -77,7 +77,7 @@ export default {
     },
     setup () {
         const getImg = (path) => {
-            return new URL(`../assets/img/${path}`, import.meta.url).href;
+            return new URL(`/src/assets/img/${path}`, import.meta.url).href;
         }
 
         const getSlider = (id) => {

@@ -19,14 +19,15 @@ export default {
     name : "CarItem",
     setup(){
         const instance = getCurrentInstance();
+        console.log(instance)
 
         const state = reactive({
             selfIndex: instance.vnode.key,
-            curentIndex: instance.parent.ctx.currentIndex
+            curentIndex: instance.parent.proxy.currentIndex
         });
 
         watch(() => {
-            return instance.parent.ctx.currentIndex;
+            return instance.parent.proxy.currentIndex;
         }, (value) => {
             state.curentIndex = value;
         })
@@ -34,6 +35,7 @@ export default {
         return {
             ...toRefs(state)
         }
+        
     }
 }
 

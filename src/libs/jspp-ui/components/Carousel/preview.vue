@@ -36,9 +36,9 @@ export default {
         default: '0.3'
     }
   },
-  setup (props, ctx) {
+  setup (props, proxy) {
     const previewClick = (index) => {
-        ctx.emit('previewClick', index);
+        proxy.emit('previewClick', index);
     }
 
     return {

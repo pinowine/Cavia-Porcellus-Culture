@@ -48,12 +48,12 @@ export default {
       ]
     }
   },
-  setup (props, ctx) {
+  setup (props, proxy) {
     const searchData = ref([]);
     const hasTypedFirstLetter = ref(false);
 
     const setItemValue = (item) => {
-      ctx.emit('setItemValue', item);
+      proxy.emit('setItemValue', item);
     }
 
     onMounted(() => {

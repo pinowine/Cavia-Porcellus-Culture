@@ -35,7 +35,7 @@ export default {
     SelectorInput,
     SelectorMenu
   },
-  setup (props, ctx) {
+  setup (props, proxy) {
     
     const state = reactive({
       inputValue: '',
@@ -44,7 +44,7 @@ export default {
 
     const setItemValue = (item) => {
       state.inputValue = item.text;
-      ctx.emit('setItemValue', item.value);
+      proxy.emit('setItemValue', item.value);
     }
 
     const searchOptions = (value) => {

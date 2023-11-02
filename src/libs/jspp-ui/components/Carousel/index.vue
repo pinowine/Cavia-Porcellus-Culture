@@ -71,18 +71,19 @@ export default {
         }
 
         onMounted(() => {
-            // console.log(state.currentIndex);
+            console.log(state.currentIndex);
             state.itemLeng = instance.slots.carItem()[0].children.length;
-            // console.log(instance);
+            console.log(instance);
         });
 
         onBeforeUnmount(() => {
-            // console.log(state.currentIndex);
+            console.log(state.currentIndex);
         })
 
         return {
             ...toRefs(state),
-            previewClick
+            previewClick,
+            setIndex,
         }
     }
 }
