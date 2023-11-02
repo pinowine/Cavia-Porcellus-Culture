@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  base: '/Cavia-Porcellus-Culture/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
